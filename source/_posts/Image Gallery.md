@@ -8,7 +8,7 @@ tags:
 - HTML
 - CSS
 ---
-这是一个《JavaScript DOM编程艺术》第四章的一个Demo，包括HTML，JavaScript和CSS，以图片库来演示DOM操作。
+这是《JavaScript DOM编程艺术》第四章的一个Demo，包括HTML，JavaScript和CSS，以图片库来演示DOM操作。
 <!--more-->
 
 ## HTML
