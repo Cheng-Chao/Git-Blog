@@ -5,8 +5,6 @@ categories:
 tags:
 - jQuery
 ---
-这篇文章总结了jQuery常用就几个方法，用起来对效率的提升很大。
-<!--more-->
 
 ### $.trim
 $.trim方法用于移除字符串头部和尾部多余的空格。

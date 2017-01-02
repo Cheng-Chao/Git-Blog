@@ -6,8 +6,6 @@ tags:
 - jQuery
 - Ajax
 ---
-Ajax的介绍以及常用写法。
-<!--more-->
 
 ### $.ajax
 jQuery对象上面还定义了Ajax方法($.ajax())，用来处理Ajax操作。调用该方法后，浏览器就会向服务器发出一个HTTP请求。
