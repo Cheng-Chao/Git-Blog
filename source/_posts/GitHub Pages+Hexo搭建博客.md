@@ -1,4 +1,4 @@
-title: Git Page+Hexo搭建博客
+title: GitHub Pages+Hexo搭建博客
 date: 2017/1/2 20:20
 categories:
 - GitHub
