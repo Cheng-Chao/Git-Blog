@@ -11,6 +11,7 @@ tags:
 这是《JavaScript DOM编程艺术》第四章的一个Demo，包括HTML，JavaScript和CSS，以图片库来演示DOM操作。
 <!--more-->
 
+----
 ## HTML
 ```html
 <!DOCTYPE html>
@@ -68,6 +69,7 @@ tags:
 </html>
 ```
 
+----
 ## JavaScript
 ```javascript 
 function showPic(whichPic){
@@ -81,6 +83,7 @@ function showPic(whichPic){
 }
 ```
 
+----
 ## CSS
 ```css
 body{
@@ -118,5 +121,6 @@ img{
 }
 ```
 
+----
 ## GitHub
 [Image Gallery](https://github.com/Cheng-Chao/Image-Gallery)

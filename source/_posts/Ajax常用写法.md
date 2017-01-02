@@ -8,6 +8,8 @@ tags:
 ---
 AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。本文介绍了Ajax的常用写法，以及各个属性的解释说明，使之有一个大致的了解。
 <!--more-->
+
+----
 ### $.ajax
 jQuery对象上面还定义了Ajax方法($.ajax())，用来处理Ajax操作。调用该方法后，浏览器就会向服务器发出一个HTTP请求。
 $.ajax()的用法有多种，最常见的是提供一个对象参数。
@@ -63,6 +65,8 @@ function completeCallback(xhr, status){
     console.log('Ajax请求已结束。');
 }
 ```
+
+----
 ### Ajax简便写法
 ajax方法还有一些简便写法。
 **$.get()** : 发出GET请求。
@@ -71,6 +75,8 @@ ajax方法还有一些简便写法。
 **$.post()** : 发出POST请求。
 **$.fn.load(**) : 读取一个html文件，并将其放入当前元素之中。
 一般来说，这些简便方法依次接受三个参数：url、数据、成功时的回调函数。
+
+----
 #### $.get()
 对应**HTTP**的**GET**方法。
 get方法接受两个参数，分别为服务器端网址和请求成功后的回调函数。
@@ -79,6 +85,8 @@ $.get('/data/people.html', function(html){
   $('#target').html(html);
 });
 ```
+
+----
 #### $.post()
 对应**HTTP**的**POST**方法。
 post方法接受三个参数，服务器端网址、发给服务器的数据和请求成功后的回调函数。
@@ -87,6 +95,8 @@ $.post('/data/save', {name: 'Rebecca'}, function (resp){
   console.log(JSON.parse(resp));
 });
 ```
+
+----
 #### $.getJSON()
 ajax方法的另一个简便写法是getJSON方法。当服务器端返回JSON格式的数据，可以用这个方法代替$.ajax方法。
 ```javascript
@@ -105,6 +115,8 @@ $.ajax({
   }
 });
 ```
+
+----
 #### $.getScript()
 $.getScript方法用于从服务器端加载一个脚本文件。
 ```javascript
@@ -131,6 +143,8 @@ jQuery.getScript("/path/to/myscript.js")
         // ...
 });
 ```
+
+----
 #### $.fn.load()
 $.fn.load不是jQuery的工具方法，而是定义在jQuery对象实例上的方法，用于获取服务器端的HTML文件，将其放入当前元素。由于该方法也属于ajax操作，所以放在这里一起讲。
 ```javascript
@@ -144,6 +158,8 @@ $('#newContent').load('/foo.html #myDiv h1:first',
 });
 ```
 上面代码只加载foo.html中匹配“#myDiv h1:first”的部分，加载完成后会运行指定的回调函数。
+
+----
 ### Ajax事件
 **jQuery**提供以下一些方法，用于指定特定的AJAX事件的回调函数。
 **.ajaxComplete()** : ajax请求完成。
@@ -161,6 +177,8 @@ $('#loading_indicator')
 .ajaxStart(function (){$(this).show();})
 .ajaxStop(function (){$(this).hide();});
 ```
+
+----
 ### 返回值
 ajax方法返回的是一个deferred对象，可以用then方法为该对象指定回调函数。
 ```javascript
@@ -171,6 +189,8 @@ $.ajax({
   console.log(resp.people);
 });
 ```
+
+----
 ### JSONP
 由于浏览器存在“同域限制”，ajax方法只能向当前网页所在的域名发出HTTP请求。但是，通过在当前网页中插入script元素（\<script>），可以向不同的域名发出GET请求，这种变通方法叫做JSONP（JSON with Padding）。
 ajax方法可以发出JSONP请求，方法是在对象参数中指定dataType为JSONP。
