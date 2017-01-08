@@ -55,7 +55,8 @@ hexo init
 ```
 ### 安装Hexo插件
 在本地博客根目录下使用**Git Bash**的命令工具执行以下命令:
-```snpm install hexo-generator-index --save
+```shell
+cnpm install hexo-generator-index --save
 cnpm install hexo-generator-archive --save
 cnpm install hexo-generator-category --save
 cnpm install hexo-generator-tag --save
